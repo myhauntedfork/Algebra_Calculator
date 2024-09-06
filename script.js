@@ -35,7 +35,7 @@ function solveEquation() {
         // Solve the equation for the variable
         const solution = expr.solveFor(variable);
 
-        displayResult(`Solution: ${variable} = ${solution.toString()}`);
+        displayResult(`${variable} = ${solution.toString()}`);
     } catch (error) {
         displayResult("Error in solving the equation: " + error.message);
     }
