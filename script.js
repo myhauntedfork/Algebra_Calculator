@@ -18,7 +18,7 @@ function solveEquation() {
     const rightSide = sides[1].trim();
 
     try {
-        // Detect the variable (e.g., x, y)
+        // Detect the variable
         const variableMatch = equationInput.match(/[a-zA-Z]/);
         if (!variableMatch) {
             displayResult("No variable found in the equation.");
@@ -26,13 +26,11 @@ function solveEquation() {
         }
         const variable = variableMatch[0];
 
-        // Use algebra.js to solve the equation
         const expr = new algebra.Equation(
             algebra.parse(leftSide),
             algebra.parse(rightSide)
         );
 
-        // Solve the equation for the variable
         const solution = expr.solveFor(variable);
 
         displayResult(`${variable} = ${solution.toString()}`);

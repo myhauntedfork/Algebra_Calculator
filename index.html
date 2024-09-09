@@ -8,28 +8,31 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="intro">
-            <p>Algebra Calculator currently supports:</p>
-            <ul>
-                <li>Linear Equations</li>
-                <li>Quadratic Equations</li>
-            </ul>
-        </div>
-
         <div class="calculator-container">
-            <input
-                type="text"
-                id="equation"
-                placeholder="Enter your equation, e.g., 2x + 3x = 25"
-            />
+            <div class="intro">
+                <p>Algebra Calculator currently supports:</p>
+                <ul>
+                    <li>Linear Equations</li>
+                    <li>Quadratic Equations</li>
+                </ul>
+            </div>
+            <input type="text" id="equation" placeholder="2x + 3x = 25" />
             <button id="solveBtn">Solve</button>
             <div class="answer-section">
                 <div class="answer-label">Result:</div>
                 <div id="result" class="answer-box"></div>
             </div>
+            <p id="description">
+                Algebra Calculator has undergone limited testing, and while no
+                issues have been found, it may still produce errors. If you
+                encounter any problems or have a feature request, please contact
+                <a
+                    href="mailto:myhauntedfork@outlook.com?subject=Algebra%20Calculator%20Feedback%20-%20[name]"
+                    >myhauntedfork@outlook.com</a
+                >
+            </p>
+            <p id="copyright">&copy; 2024 MyHauntedFork</p>
         </div>
-
-        <footer>ⓒ 2024 Andrew Hinckley</footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.6/algebra.js"></script>
