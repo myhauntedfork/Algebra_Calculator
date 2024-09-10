@@ -8,31 +8,66 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <header><b>Algebra Calculator</b></header>
         <div class="calculator-container">
             <div class="intro">
                 <p>Algebra Calculator currently supports:</p>
                 <ul>
-                    <li>Linear Equations</li>
+                    <li>Linear Equations with Multiple Variables</li>
                     <li>Quadratic Equations</li>
+                    <li>Polynomial Equations</li>
+                    <li>Rational Equations</li>
+                    <li>Exponential Equations</li>
+                    <li>Logarithmic Equations</li>
+                    <li>Systems of Equations</li>
+                    <li>Inequalities</li>
+                    <li>Absolute Value Equations</li>
+                    <li>Piecewise Functions</li>
+                    <li>Trigonometric Equations</li>
+                    <li>Matrix Equations</li>
                 </ul>
             </div>
-            <input type="text" id="equation" placeholder="2x + 3x = 25" />
+            <label for="equationType">Select Equation Type:</label>
+            <select id="equationType">
+                <option value="linear">Linear Equation</option>
+                <option value="quadratic">Quadratic Equation</option>
+                <option value="polynomial">Polynomial Equation</option>
+                <option value="rational">Rational Equation</option>
+                <option value="exponential">Exponential Equation</option>
+                <option value="logarithmic">Logarithmic Equation</option>
+                <option value="system">System of Equations</option>
+                <option value="inequality">Inequality</option>
+                <option value="absoluteValue">Absolute Value Equation</option>
+                <option value="piecewise">Piecewise Function</option>
+                <option value="trigonometric">Trigonometric Equation</option>
+                <option value="matrix">Matrix Equation</option>
+            </select>
+            <input
+                type="text"
+                id="equation"
+                placeholder="Enter your equation"
+            />
             <button id="solveBtn">Solve</button>
             <div class="answer-section">
-                <div class="answer-label">Result:</div>
+                <div class="answer-label">Answer:</div>
                 <div id="result" class="answer-box"></div>
             </div>
             <p id="description">
-                Algebra Calculator has undergone limited testing, and while no
-                issues have been found, it may still produce errors. If you
-                encounter any problems or have a feature request, please contact
+                Algebra Calculator has undergone limited testing. Contact
+                <a href="mailto:myhauntedfork@outlook.com">here</a> if you have
+                issues.
+            </p>
+        </div>
+        <footer>
+            <p id="copyright">
+                &copy; 2024 MyHauntedFork |
                 <a
-                    href="mailto:myhauntedfork@outlook.com?subject=Algebra%20Calculator%20Feedback%20-%20[name]"
-                    >myhauntedfork@outlook.com</a
+                    href="https://github.com/myhauntedfork/Algebra_Calculator"
+                    target="_blank"
+                    >GitHub</a
                 >
             </p>
-            <p id="copyright">&copy; 2024 MyHauntedFork</p>
-        </div>
+        </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/algebra.js/0.2.6/algebra.js"></script>
